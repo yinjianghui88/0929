@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d</title>
+	<style>
+	.box_1{
+		width: 150px;
+		height: 200px;
+		border: 1px solid #f00;
+		padding: 4px;
+		perspective:1000;
+		-webkit-perspective:1000;
+	}
+	.box_1 div{
+		width: 140px;
+		height: 198px;
+		background-color: #393222;
+		margin: auto;
+		transition: all 1s;
+	}
+	.box_1 div:hover{
+		transform: rotateX(45deg);
+	}
+
+	</style>
+</head>
+<body>
+<div class="box_1">
+	<div></div>
+</div>
+	
+</body>
+</html>

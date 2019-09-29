@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cude</title>
+<style>
+body{
+	perspective:1000;
+	-webkit-perspective:1000;
+}
+.cude{
+	width: 500px;
+	height: 500px;
+/* 	background-color:skyblue; */
+    /* border: dashed 1px red; */
+	margin: 140px auto;
+	transform: rotateX(-30deg) rotateY(30deg);
+	transform-style: preserve-3d;
+	position: relative;
+	animation: cude 5s linear infinite;
+}
+.cude>div{
+	width: 300px;
+	height: 300px;
+	font-size: 40px;
+	text-align: center;
+	line-height: 300px;
+	position: absolute;
+	top:0;
+	left:0;
+	opacity: 0.7;
+	transition: all 0.5s linear;
+}
+.front{
+	background-color:yellow;
+	transform: translateZ(150px);
+}
+.back{
+	background-color: red;
+	transform:translateZ(-150px) rotateY(180deg) ;
+} 
+.top{
+	background-color:green;
+	transform:  translateY(-150px)rotateX(90deg);
+}
+.bottom{
+	background-color:blue;
+	transform:translateY(150px ) rotateX(-90deg) ;
+}
+.left{
+	background-color: purple;
+	transform:translateX(-150px ) rotateY(-90deg );
+}
+.right{
+	background-color: pink;
+	transform:translateX(150px ) rotateY(90deg );
+}
+@keyframes cude{
+	from{
+		transform: rotateX(-30deg) rotateY(30deg);
+	}
+	to{
+		transform: rotateX(-390deg) rotateY(390deg) rotateZ(369deg);
+
+	}
+}
+.cude:hover .front{
+	transform: translateZ(250px);
+	/* border-radius: 50%; */
+}
+.cude:hover .back{
+	transform: translateZ(-250px) rotateY(180deg) ;
+	/* border-radius: 50%; */
+}
+.cude:hover .top{
+	transform: translateY(-250px)rotateX(90deg);
+	/* border-radius: 50%; */
+}
+.cude:hover .bottm{
+	transform:translateY(250px ) rotateX(-90deg) ;
+	/* border-radius: 50%; */
+}
+.cude:hover .left{
+	transform:translateX(-250px ) rotateY(-90deg );
+	/* border-radius: 50%; */
+}
+.cude:hover .right{
+	transform:translateX(250px ) rotateY(90deg );
+	/* border-radius: 50%; */
+}
+
+	</style>
+</head>
+<body>
+<div class="cude">
+	<div class="front">front</div>
+	<div class="back">back</div>
+	 <div class="top">top</div>
+	<div class="bottom">bottom</div>	
+	<div class="left">left</div>
+   <div class="right">right</div>
+		
+</div>	
+</body>
+</html>
