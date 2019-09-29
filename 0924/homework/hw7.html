@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box{
+		width: 600px;
+		height: 900px;
+		border: 5px solid black;
+		margin: 40px auto;
+		background-color: black;
+
+
+	}
+	.box1{
+		width: 580px;
+		height: 800px;
+		border: 5px solid black;
+		margin: 40px auto;
+		background-color: #eee;
+	}
+	.head{
+		width: 100%;
+		height: 300px;
+		text-align: center;
+		line-height: 280px;
+		font-size: 30px;
+		color: #333;
+
+		background-color: #ccc;	
+		position: relative;
+		border-top-left-radius:30px;
+
+
+	}
+	.circle{
+			width: 200px;
+			height: 200px;
+			background-color: white;
+			border-radius:50%; 
+			position: absolute;
+			left:200px ;
+			bottom: -100px;
+	}
+	.disc{
+		width: 120px;
+		height: 120px;
+		border-radius:50%;
+		text-align: center;
+		line-height: 120px;
+		font-weight: "微软雅黑";
+		font-size: 40px;
+		color: #666;
+		/*border: 1px solid red; */
+		margin: 40px auto;
+		box-shadow:1px -5px 0px 0px #666,
+		0px 0px 40px 0px #aaa inset; 
+	}
+	.content{
+		width: 100%;
+		height: 300px;
+	}
+	button{
+		background-color: green;
+		text-align: center;
+		width: 200px ;
+		height: 100px;
+		margin: 160px 200px;
+		color: white;
+		font-size: 30px;
+		transition: all 2s linear;
+
+
+	}
+	.footer{
+		text-align: center;
+		margin: 40px auto;
+	}
+	hr{
+		width: 80%;
+		color: #666;
+	}
+	
+button:hover{
+	border-radius:50px; 
+	cursor:pointer;
+	background-color: 
+	/*background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 
+				25%, transparent 25%, transparent 50%,
+				 rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);*/
+
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="box1">
+		<div class="head">Professional
+			<div class="circle">
+				<div class="disc">$29</div>
+			</div>
+		</div>
+		<div class="content">
+			<button>SIGN UP</button>
+		</div>
+
+		<div class="footer">
+		<hr />
+			<p><strong>5GB</strong> Disk Space</p>
+			<hr />
+			<p><strong>50GB</strong> Monthly Bandwidth</p>
+<hr />
+			<p><strong>10</strong> Email Accounts</p>
+			<hr />
+			<p><strong>Unlimited</strong> subdomains</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

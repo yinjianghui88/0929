@@ -1,0 +1,276 @@
+div{margin-bottom: 4px;}
+.box-1{
+    width: 200px;
+    height: 100px;
+    background-color: #dedede;
+    padding: 10px;
+}
+.box-2{
+    width: 200px;
+    height: 100px;
+    background-color: #f00;
+    /*不透明度，整个元素透明*/
+    opacity: .7;
+}
+.box-3{
+    width: 200px;
+    height: 100px;
+    /*颜色透明度*/
+    background-color: rgba(0,0,255,.6);
+}
+
+/*边框样式*/
+.box-4{
+    width: 200px;
+    height: 100px;
+    /*边框宽度 border-[*-]width */
+    border-width: 6px;
+    /*边框样式 border-[*-]style */
+    border-left-style: solid;
+    border-right-style: dotted;
+    border-top-style: dashed;
+    border-bottom-style: double;
+    /*边框颜色*/
+    border-left-color: #c9302c;
+    border-right-color: lime;
+    border-top-color: #f02bfb;
+    border-bottom-color: #0073ff;
+}
+/*边框样式缩写*/
+.box-5{
+    width: 200px;
+    height: 100px;
+    border: 3px solid #e03459;
+}
+.box-6{
+    width: 200px;
+    height: 100px;
+    border-left: 3px dashed #f00;
+    border-right: 4px dotted dodgerblue;
+    border-top: 4px solid #8E2DE2;
+    border-bottom: 5px double lime;
+}
+.box-7{
+    width: 200px;
+    height: 120px;
+    border: 10px groove #2fa8ec;
+}
+.box-8{
+    width: 200px;
+    height: 120px;
+    border: 10px ridge #f82ace;
+}
+/*边框圆角*/
+.box-9{
+    width: 200px;
+    height: 120px;
+    background-color: #50f06f;
+    border-radius: 20px;
+}
+.box-a{
+    width: 200px;
+    height: 120px;
+    background-color: #50f06f;
+    border-radius: 30%;
+}
+.box-b{
+    width: 200px;
+    height: 200px;
+    background-color: #f5006f;
+    border-radius: 50%;
+}
+.box-c{
+    width: 200px;
+    height: 120px;
+    background-color: #f500f6;
+    /*四个半径值分别是左上角、右上角、右下角和左下角，顺时针*/
+    border-radius: 5px 10px 15px 20px;
+}
+.box-d{
+    width: 200px;
+    height: 120px;
+    background-color: #f500f6;
+    border-radius: 10px 20px 30px 40px  /  10px 10px 15px 20px;
+}
+/*
+border-top-left-radius 	定义了左上角的弧度
+border-top-right-radius 	定义了右上角的弧度
+border-bottom-right-radius 	定义了右下角的弧度
+border-bottom-left-radius 	定义了左下角的弧度
+*/
+.box-e{
+    width: 120px;
+    height: 120px;
+    background-color: #50f06f;
+    border-top-left-radius: 100%;
+    border-top-left-radius: 120px;
+}
+.box-f{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid #8E2DE2;
+    border-right: 50px solid #e03459;
+    border-top: 50px solid #0f9;
+    border-bottom: 50px solid orange;
+}
+.box-g{
+    width: 0px;
+    height: 0px;
+    /*transparent 透明*/
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid orange;
+}
+.box-h{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid #e03459;
+    border-bottom: 50px solid orange;
+}
+.box-i{
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid #e03459;
+    border-bottom: 50px solid orange;
+}
+.box-j{
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid #e03459;
+    border-top: 50px solid orange;
+}
+.box-k{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid #e03459;
+    border-top: 50px solid orange;
+}
+.box-l{
+    width: 500px;
+    height: 0px;
+    border-left: 50px solid #e03459;
+    border-bottom: 50px solid orange;
+    border-right: 50px solid #0073ff;
+    border-top: 50px solid #00ff99;
+}
+.box-m{
+    width: 0px;
+    height: 50px;
+    border-left: 50px solid #e03459;
+    border-bottom: 50px solid orange;
+    border-right: 50px solid #0073ff;
+    border-top: 50px solid #00ff99;
+}
+.box-n{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid #e03459;
+    border-bottom: 200px solid orange;
+    border-right: 50px solid #0073ff;
+    /*border-top: 50px solid #00ff99;*/
+}
+.box-o{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid #e03459;
+    border-bottom: 200px solid orange;
+    border-right: 150px solid #0073ff;
+    /*border-top: 50px solid #00ff99;*/
+}
+.box-p{
+    width: 0px;
+    height: 0px;
+    border-left: 150px solid #e03459;
+    /*border-bottom: 200px solid orange;*/
+    border-right: 50px solid #0073ff;
+    border-top: 150px solid #00ff99;
+}
+.box-p{
+    width: 200px;
+    height: 120px;
+    border-left: 8px solid #e03459;
+    border-bottom: 8px solid orange;
+    border-right: 8px solid #0073ff;
+    border-top: 8px solid #00ff99;
+    border-radius: 50%;
+}
+/*盒子阴影*/
+.shadow-1{
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    border: thin solid rgba(255,0,0,.5);
+    /* thin medium thick */
+    /*box-shadow: x偏移量 y偏移量 阴影模糊半径 阴影扩展半径(阴影大小) 阴影颜色 [投影方式]*/
+    box-shadow: 2px -1px 2px 1px #0073ff,
+                 5px -4px 1px 1px #ff7300,
+                 5px -5px 1px 1px #00ff73,
+                 5px -5px 1px 1px #999 inset;
+}
+.shadow-2{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 16px -8px 50px 52px #f00 inset;
+}
+.shadow-3{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 30px -38px 0px 10px #f00 inset,
+                 70px 0px 0px 10px #0f0 inset,
+                80px 70px 0px 10px #00f inset;
+}
+
+/*段落样式*/
+.para-1{
+    border: 1px solid #f00;
+    /*行高*/
+    line-height: 24px;
+    /*段落缩进*/
+    text-indent: 2rem;
+    /*段落对齐*/
+    text-align: justify;
+    /* left center right justify*/
+    /*文字间距*/
+    letter-spacing: 2px;
+}
+.para-2{
+    border: 1px solid #f90;
+    width:790px;
+    /*不允许换行*/
+    white-space: nowrap;
+    /*超出部分隐藏*/
+    overflow: hidden;
+    /*文字溢出*/
+    text-overflow: ellipsis; /*clip  ellipsis*/
+}
+.para-3{
+    border: 1px solid #0073ff;
+    width: 250px;
+    /*段落换行 normal | break-word*/
+    word-wrap: break-word;
+}
+/*背景样式*/
+.bg-1{
+    width: 600px;
+    height: 370px;
+    background-color: #00ff99;
+    /*背景图片*/
+    background-image: url("../images/3.jpg");
+    /*背景图片大小*/
+    background-size: 300px 185px;
+    /*背景图片平铺方式*/
+    background-repeat: repeat-y; /* repeat no-repeat repeat-x repeat-y */
+}
+.bg-2 {
+    width: 600px;
+    height: 370px;
+    background-color: #00ff99;
+    background-image: url("../images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    /*背景图片定位*/
+    background-position: 50% 100px; /* px % left top right bottom center*/
+}
