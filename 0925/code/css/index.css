@@ -1,0 +1,113 @@
+.bg-1{
+    width: 600px;
+    height: 370px;
+    border: 1px solid red;
+    /* 背景样式缩写
+       background: 颜色 图片url 平铺方式 定位/大小;
+    */
+    background: #00ff99 url("../images/b.jpg") no-repeat center center/100% 100%;
+}
+/*
+cover：是按照等比缩放铺满整个区域。如果显示如果显示比例和显示区域的比例相差很大某些部分会不显示，比如长度比宽度大很多，则宽度左侧会有一部分不显示。
+100%：长宽100%显示，可能会拉伸图片
+contain：也是等比缩放，按照某一边来覆盖显示区域的，会有白边
+*/
+.bg-2{
+    width: 600px;
+    height: 370px;
+    border: 1px solid red;
+    background-image: url("../images/aa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*
+背景原点
+设置元素背景图片的原始起始位置。必须保证背景是background-repeat为no-repeat 此属性才会生效。
+*/
+.bg-3{
+    width: 600px;
+    height: 370px;
+    padding: 10px;
+    border: 20px solid rgba(0,0,0,.3);
+    background-image: url("../images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*背景原点 border-box(默认) padding-box content-box */
+    background-origin: content-box;
+}
+.bg-4{
+    width: 600px;
+    height: 370px;
+    padding: 10px;
+    border: 20px solid rgba(0,0,122,.3);
+    background-image: url("../images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: border-box;
+
+    /* 背景的显示区域 border-box(default) padding-box content-box */
+    background-clip: content-box;
+}
+/* background-attachment 属性设置背景图像是否固定或者随着页面的其余部分滚动*/
+.bg-5{
+    width: 600px;
+    height: 370px;
+    padding: 10px;
+    border: 2px solid rgba(0,0,122,.3);
+    background-image: url("../images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px 600px;
+    background-attachment: fixed; /* scroll fixed */
+}
+/*
+用逗号隔开每组 background 的缩写值；
+如果有 size 值，需要紧跟 position 并且用 "/" 隔开；
+如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明
+所有背景图片应用该属性值。
+background-color 只能设置一个
+*/
+.bg-6{
+    width: 800px;
+    height: 495px;
+    background-color: #4aa7d9;
+    background-image: url("../images/bolt.png") , url("../images/rhino.png"), url("../images/snowman.png");
+    /*background-repeat: no-repeat,no-repeat,no-repeat;*/
+    background-repeat: no-repeat;
+    background-position: left top, center center, right bottom;
+    background-size: 200px 200px, 200px 200px, 230px 230px;
+    background-attachment: scroll;
+}
+
+/*列表项目符号list-style-type*/
+.list-1{
+    list-style-type: square; /*ul  disc cirle square none */
+}
+.list-2{
+    list-style-type: cjk-ideographic;
+    /* ol  none decimal lower-alpha upper-alpha lower-roman upper-roman cjk-ideographic */
+    /*项目符号定位*/
+    list-style-position: inside; /* inside outside inherit*/
+}
+.list-2 > li{
+    border: 1px dashed #f00;
+    margin-bottom: 2px;
+}
+/*自定义项目符号*/
+.list-3{
+    list-style-image: url("../images/flag.png");
+    list-style-position: inside;
+}
+.list-3 > li{
+    border: 1px dashed #f00;
+    margin-bottom: 2px;
+}
+
+.list-4{
+    list-style-type: none;
+}
+.list-4 > li{
+    border: 1px dotted #f0f;
+    margin-bottom: 1px;
+    background: url("../images/flag.png") no-repeat left center/16px 16px;
+    text-indent: 22px;
+}

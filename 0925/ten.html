@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 400px ;
+			height: 300px;
+			background-color: green;
+			/*transform: translate(200px, 100px) rotate(130deg) skew(15deg) scale(1.5) ;*/
+			transform: translate(200px, 100px) rotate(45deg)skew(15deg) ;
+			transition-property:width  height;
+			transition-duration:.5s;
+			transition-timing-function:linear;  
+		}
+		.box:hover{
+			width: 400px;
+			height: 600px;
+		}
+		.box2{
+			width: 200px;
+			height: 60px;
+			background-color:green; 
+			transition: all .5s .3s linear;
+		}
+		.box2:hover{
+			 width: 600px;
+			height: 200px;
+			background-color: orange;
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			transform-origin:right 0; 
+			transition: all 1s linear;
+			margin: 30px auto;
+
+		}
+		.box3:hover{
+				transform: rotateY(3600deg);
+				background-color: red;
+
+		}
+		.box4{
+			width: 180px;
+			height: 200px;
+			perspective:1000px;
+			border: 1px dashed red;
+			-moz-perspective-origin:right 0;
+			
+		}
+		.box4>div{
+    width: 140px;
+    height: 198px;
+    background-color: #f9c;
+    margin: auto;
+    transition: all .5s;
+}
+.box4:hover > div{
+    transform: rotateY(300deg);
+}
+.animation{
+	width: 400px;
+	height: 300px;
+	border: 1px solid red;
+	animation: div .5s linear 1;
+
+}
+.animation>div{
+	width: 350px;
+	height: 280px;
+	background-color: purple;
+	margin: 10px auto;
+
+}
+@keyframes  div{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+ .x{
+		width: 200px;
+		height: 70px;
+		border: 1px solid red;
+		animation: move 1s linear 2  ;
+		animation-fill-mode:backwards; 
+		/*animation-play-state: running;*/
+			
+ }
+ .x>div{
+ 	width: 200px;
+		height: 70px;
+		background-color: red;
+ }
+ .x:hover{
+		animation-play-state: paused;
+ }
+
+ @keyframes move{
+ 	from{
+		transform: translate(0px);
+ 	}
+ 	to{
+		transform: translate(500px);
+ 	}
+ }
+
+
+	</style>
+</head>
+<body>
+	<!-- <div class="box"></div> -->
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<hr>
+	<div class="box4">
+		<div>	</div>
+	</div>
+	<div class="animation">	
+		<div></div>
+	</div>
+
+<hr>
+
+	<div class="x">
+		<div></div>
+	</div>
+</body>
+</html>

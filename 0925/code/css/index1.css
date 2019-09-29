@@ -1,0 +1,151 @@
+/*变形样式*/
+.tran-1{
+    width: 200px;
+    height: 80px;
+    background-color: #0073ff;
+    transform: translate(220px,10px) rotate(180deg) scale(1.2) skewX(15deg);
+}
+/*过渡动画*/
+.trans-2{
+    width: 200px;
+    height: 80px;
+    background-color: #e03459;
+    transition-property: width,transform; /*过渡属性*/
+    transition-duration: 1s; /* 过渡持续时间 */
+    transition-delay: .2s; /*过渡延迟时间*/
+    transition-timing-function: linear; /* ease(默认) ease-in ease-out ease-in-out linear */
+}
+.trans-2:hover{
+    width: 400px;
+    transform: translate(100px,40px) skewX(15deg);
+}
+
+.trans-3{
+    width: 200px;
+    height: 80px;
+    background-color: #2fe672;
+    transition: width .6s linear,
+                height .8s ease,
+                background-color 1.2s linear;
+}
+.trans-3:hover{
+    width: 500px;
+    height: 140px;
+    background-color: darkviolet;
+}
+.trans-4{
+    width: 200px;
+    height: 80px;
+    background-color: #f2e672;
+    transition: all 2s ease-in;
+}
+.trans-4:hover{
+    width: 440px;
+    background-color: #db2c8f;
+}
+
+.trans-5{
+    width: 200px;
+    height: 200px;
+    background-color: #a51add;
+    transition: all 3s linear;
+    transform-origin: 50% 0;
+    margin-top: 20px;
+}
+.trans-5:hover{
+    transform: rotate(1800deg);
+    background-color: #00ff99;
+}
+.trans-6{
+    width: 200px;
+    height: 200px;
+    background-color: #5aa1dd;
+    transition: all .8s linear;
+}
+.trans-6:hover{
+    transform: rotateX(180deg);
+}
+.trans-7{
+    width: 200px;
+    height: 200px;
+    background-color: #5adda1;
+    transition: all .8s linear;
+    transform-origin: right 0;
+}
+.trans-7:hover{
+    transform: rotateY(180deg);
+}
+
+.trans-8{
+    width: 400px;
+    height: 400px;
+    border: 1px solid #f00;
+    /*perspective 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果*/
+    perspective:1000px;
+    -webkit-perspective:1000px;
+    perspective-origin:  center center; /*指定透视点的位置  left top right bottom px % */
+}
+.box{
+    width: 380px;
+    height: 380px;
+    margin: 10px auto;
+    background-color: #a51add;
+    transition: all .6s linear;
+}
+.trans-8:hover > .box{
+    transform: rotateX(30deg);
+}
+/*自定义动画*/
+.ani-1{
+    width: 200px;
+    height: 200px;
+    background-color: #00ff99;
+    /* 自定义动画名称  animation-name : 关键帧名称; */
+    animation-name: XZ;
+    animation-duration: 1.5s; /*自定义动画过渡时间 s ms*/
+    animation-delay: 1s; /*自定义动画的延迟时间 s ms*/
+    animation-timing-function: linear; /* ease ease-in ease-out ease-in-out linear*/
+    animation-iteration-count: 2; /*自定义动画执行次数 number infinite*/
+}
+@keyframes XZ {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(720deg);
+    }
+}
+@-webkit-keyframes XZ {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(720deg);
+    }
+}
+
+.ani-2{
+    width: 200px;
+    height: 80px;
+    background-color: #9900ff;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: .2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+    /*自定义动画的执行方向(顺序)*/
+    animation-direction: alternate; /* normal reverse alternate alternate-reverse*/
+    /*设置对象动画时间之外的状态*/
+    animation-fill-mode: both; /* forwards backwords both */
+}
+.ani-2:hover{
+    animation-play-state: paused;
+}
+@keyframes move {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(400px);
+    }
+}

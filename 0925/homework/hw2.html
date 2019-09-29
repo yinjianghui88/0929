@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+.box{
+	width: 300px;
+	height: 300px;
+	margin: 100px auto;
+	
+}
+.box>img{
+	width: 200px ;
+	height: 200px;
+	margin: 50px auto;
+	animation: disk 2s linear infinite paused ;
+}
+@keyframes disk{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+.box>img:hover{
+	animation-play-state:running; 
+}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="./images/musicDisk.png" alt="">
+	</div>
+</body>
+</html>
