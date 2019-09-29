@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+    <div class="box-1 fl">1</div>
+    <div class="box-2 fl">2</div>
+    <div class="box-3">测试浮动1</div>
+    <span class="box-4 fr">3</span>
+    <span class="box-5 fr">4</span>
+    <div class="clearfix"></div>
+    <div class="box-3">测试浮动2</div>
+    <hr />
+    <nav class="nav-1">
+        <a href="">首页</a>
+        <a href="">关于我们</a>
+        <a href="">企业文化</a>
+        <a href="">联系我们</a>
+        <a href="">产品列表</a>
+        <div class="clearfix"></div>
+    </nav>
+    <!--绝对定位
+        1. 脱离文档流
+        2. 通过 top,bottom,left,right 定位
+        3. 父元素的 position 属性为 static(默认) 或者父元素为 body，
+        将以body坐标原点进行定位
+        4. 如果父元素 position 为 relative  时，将以父元素进行定位
+    -->
+    <div class="pos-1">1. 父元素为body，绝对定位</div>
+    <div class="pos-2">
+        <div>2. 父元素不是body，父元素的 position 属性为 static</div>
+    </div>
+    <div class="box-3">测试1</div>
+
+    <div class="pos-3">
+        <div>父元素的position属性为relative,将以父元素坐标原点进行定位</div>
+    </div>
+
+<!--相对定位
+relative说明 ：
+相对定位（相对自己原来的位置而言）
+不脱离文档流
+参考自身静态位置通过 top,bottom,left,right 定位
+-->
+    <div class="pos-4">相对定位</div>
+    <span>测试相对定位效果</span>
+
+<!--固定定位
+fixed说明：
+固定定位实际上只是绝对定位的特殊形式；固定定位的元素是相对于浏览器窗口而固定，而不是相对于其包含元素；即使页面滚动了，它们仍然会处在浏览器窗口中跟原来完全一样的地方-->
+    <div class="pos-5">
+        <button onclick="">X</button>
+        固定定位
+    </div>
+
+    <div class="pos-6">1</div>
+    <div class="pos-7">2</div>
+    <div class="pos-8">3</div>
+
+    <table border="1" cellspacing="0" width="400" height="100" style="border-collapse: collapse;">
+    <!--border-collapse: collapse; 合并表格边框 -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table><br />
+
+    <fieldset style="width: 300px;">
+        <legend align="center">登录</legend>
+        <form action="">
+            用户名:
+            <input type="text" name="username" /><br />
+            密&emsp;码:
+            <input type="password" name="pwd" /><br />
+            <input type="submit" />
+        </form>
+    </fieldset>
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>

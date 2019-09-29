@@ -1,0 +1,256 @@
+/*属性选择符*/
+/*E[attr] 选择具有attr属性的元素E*/
+input[name]{
+    border-radius: 16px;/*边框圆角*/
+    border: 1px solid #2fa8ec;
+    /* solid dotted dashed double */
+}
+/*E[attr="val"] 选择具有attr属性且值为val的元素E*/
+input[name="test2"]{
+    text-indent: 16px; /*文本缩进 px % em rem */
+    color: #2fa8ec;
+}
+.box{
+    width: 200px;
+    height: 40px;
+    background-color: #ccc;
+    margin-bottom: 2px; /*下外边距2px*/
+}
+/*E[attr~="val"]
+选择具有att属性且属性值为一用空格分隔的字词列表，其中一个等于val的E元素*/
+div[class~="box2"]{
+    background-color: #db2c8f;
+}
+/* E[attr^="val"]
+选择具有att属性且属性值为以val开头的字符串的E元素*/
+div[class^="abc"]{
+    width: 200px;
+    height: 40px;
+    background-color: #50f06f;
+}
+/*E[attr$="val"]
+选择具有att属性且属性值为以val结尾的字符串的E元素*/
+div[class$="box3"]{
+    width: 200px;
+    height: 40px;
+    background-color: #c9302c;
+}
+/* E[attr*="val"]
+选择具有att属性且属性值为包含val的字符串的E元素*/
+div[class*="test"]{
+    width: 200px;
+    height: 40px;
+    background-color: yellow;
+}
+/* E[attr|="val"]
+选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素*/
+div[class|="box"]{
+    width: 200px;
+    height: 40px;
+    background-color: hotpink;
+}
+
+
+/*伪对象选择符*/
+/*E::first-letter 设置对象内的第一个字符的样式*/
+.para-1::first-letter{
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+/*E::first-line
+设置对象内的第一行的样式*/
+.para-1::first-line{
+    background-color: goldenrod;
+}
+/*E::selection
+设置对象被选择时的颜色
+*/
+.para-1::selection{
+    background-color: #c9302c;
+    color: #fff;
+}
+/*兼容*/
+.para-1::-moz-selection{
+    background-color: #c9302c;
+    color: #fff;
+}
+/*E::placeholder
+设置对象文字占位符的样式*/
+#input-1::placeholder{
+    color: #f00;
+    font-family: '楷体';/*字体*/
+    font-style: italic; /*斜体*/
+}
+#input-1::-webkit-input-placeholder{
+    color: #f00;
+    font-family: '楷体';
+    font-style: italic;
+}
+#input-1::-moz-placeholder{
+    color: #f00;
+    font-family: '楷体';
+    font-style: italic;
+}
+#input-1:-ms-input-placeholder{
+    color: #f00;
+    font-family: '楷体';
+    font-style: italic;
+}
+
+/*E::before
+设置在对象前（依据对象树的逻辑结构）发生的内容
+用来和content属性一起使用
+*/
+#span1::before{
+    content: "***";
+    color: red;
+    font-size: 30px;
+}
+#span1::after{
+    content: "***";
+    color: red;
+    font-size: 30px;
+}
+
+.title{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #dedede;
+    margin: 20px auto 0;
+    text-align: center; /*文本对齐方式*/
+    line-height: 40px;/*行高*/
+    font-size: 30px;
+    font-weight: bold;
+    color: goldenrod;
+    border-radius: 21px;
+    position: relative;
+}
+.title::before,
+.title::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: goldenrod;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+.title::before{
+    top: -15px;
+}
+.title::after{
+    bottom: -15px;
+}
+
+/*字体样式*/
+.para-2{
+    font-family: '华文行楷';/*font-family 字体*/
+    font-size: 20px; /*字体大小 px % em rem*/
+
+    /*控制字体粗细 normal bold bolder*/
+    font-weight: bold;
+
+    /*控制字体是否倾斜 normal italic oblique*/
+    font-style: italic;
+
+    /*字体颜色*/
+    color: red;
+
+    /*控制文本装饰线条 none underline overline line-through*/
+    text-decoration: line-through;
+}
+.para-3{
+    /*字体样式缩写
+    font: 倾斜 加粗 大小/行高 字体名称;
+    */
+    font: italic bold 30px/32px '黑体';
+
+    /*文字阴影
+    text-shadow: 水平阴影位置 垂直阴影位置 模糊 颜色;
+    */
+    text-shadow: 2px 2px 3px #fc0,
+                  3px 1px 3px #f00;
+}
+.para-4{
+    font: italic bold 50px/52px '黑体';
+
+    text-shadow: 0 1px #808d93,
+                  -1px 0 #cdd2d5,
+                  -1px 2px #808d93,
+                  -2px 1px #cdd2d5,
+                  -2px 3px #808d93,
+                  -3px 2px #cdd2d5,
+                  -3px 4px #808d93,
+                  -4px 3px #cdd2d5,
+                  -4px 5px #808d93,
+                  -5px 4px #cdd2d5,
+                  -5px 6px #808d93,
+                  -6px 5px #cdd2d5,
+                  -6px 7px #808d93,
+                  -7px 6px #cdd2d5,
+                  -7px 8px #808d93,
+                  -8px 7px #cdd2d5;
+}
+.para-5{
+    font: italic bold 50px/52px '黑体';
+    text-shadow: 0 0 20px #fefcc9,
+                10px -10px 30px #feec85,
+                -20px -20px 40px #ffae34,
+                20px -30px 35px #ec760c,
+                -20px -40px 40px #cd4606,
+                0 -50px 65px #973716,
+                10px -70px 70px #451b0e;
+}
+
+/*外边距*/
+.marg-1{
+    width: 300px;
+    height: 120px;
+    background-color: rgb(255,0,0);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.marg-2{
+    width: 300px;
+    height: 120px;
+    background-color: rgb(0,255,0);
+    margin: 40px;
+    /*缩写方式一 外边距缩写 4个方向相等*/
+}
+.marg-3{
+    width: 300px;
+    height: 120px;
+    background-color: rgb(0,0,255);
+    margin: 20px 20px 10px 50px;
+    /*缩写方式二 4个方向值都不同
+        margin: 上  右  下  左;
+    */
+}
+.marg-4 {
+    width: 300px;
+    height: 120px;
+    background-color: rgb(0,250, 255);
+    margin: 18px 25px;
+    /*缩写方式三 上下相同 左右相同
+        margin: 上下值  左右值;
+    */
+}
+.marg-5 {
+    width: 300px;
+    height: 120px;
+    background-color: rgb(123, 25, 255);
+    margin: 20px 30px 10px;
+    /*缩写方式四 上下不同，左右相同
+        margin: 上   左右   下;
+    */
+}
+.marg-6 {
+    width: 300px;
+    height: 120px;
+    background-color: rgb(123, 225, 155);
+    margin: 0 auto; /*元素自动居中*/
+}

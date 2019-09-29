@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input:checked+label{
+			color: orange;
+			font-size: 40px;
+			font-weight: bold;
+		}
+		input[name^="text"]{
+			width: 200px;
+			height: 40px;
+			text-indent: 1rem;
+			border-radius:20px;
+
+		}
+		.box{
+			width: 200px;
+			height: 60px;
+			background-color: green;
+			margin-bottom:3px; 
+		}
+		div[class~="box2"]{
+			background-color: red;
+
+		}
+		div[class*="box"]{
+			width: 500px;
+			height: 60px;
+			background-color: blue;
+			margin-bottom:20px; 
+		}
+		div[class|="box"]{
+			background-color:yellow;
+		}
+		.manjianghong::first-letter{
+			font-size: 30px;
+			color: red;
+			font-weight: bold;
+		}
+		.manjianghong::first-line{
+			/*font-size: 30px;
+			color: red;*/
+			font-weight: bold;
+			background-color: goldenrod;
+		}
+		.manjianghong::-moz-selection{
+			color: #fff;
+			background-color: goldenrod;
+		}
+		#placeholder::placeholder{
+			color: #f00;
+			font-family: '楷体';
+			font-style: oblique;
+			font-size: 30px;
+
+
+		}
+
+span::before{
+	content:"***";
+	color: red;
+	font-size: 30px;
+
+	
+}
+span::after{
+	content:"***";
+	color: red;
+	font-size: 30px;
+
+	
+}
+.title{
+	width: 20rem;
+	height: 3rem;
+	border: 0.1rem solid red;
+	margin: 3rem auto;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 3rem;
+	font-weight: bold;
+	color: goldenrod;
+	border-radius: 1.5rem;
+	position: relative;
+}
+
+.title::before,.title::after{
+	content:"";
+	width: 20rem;
+	height: 2px;
+	display: block;
+	background-color: goldenrod;
+	position: absolute;
+	left: 50%;
+	margin-left:-10rem; 
+
+}
+.title::before{
+   top: -1rem;
+}
+.title::after{
+ bottom: -1rem;
+}
+.fontstyle{
+	font-family: '华文行楷' '宋体';
+	font-size: 3rem;
+	color: green;
+	font-style: normal;
+	font-weight: bold;
+}
+
+		
+	</style>
+</head>
+<body>
+		<input type="checkbox" name="hobby[]"  value="yy" id="box">
+		<label for="box">游泳</label>	
+		<input type="checkbox" name="hobby[]" value="tg" id="box">
+		<label for="box">跳高</label>	
+		<input type="checkbox" name="hobby[]" value="xx" id="box">
+		<label for="box">学习</label>	
+		<input type="checkbox" name="hobby[]" value="game" id="box">	
+		<label for="box">打游戏</label>	
+		<input type="text" name="text1">	
+		<input type="text" name="text2">
+		<br>
+			<div class="box box1"></div>
+			<div class="box box2"></div>
+			<br>
+			<div class="box box3"></div>
+			<div class="box-ll"></div>
+			<div class="box-dd"></div>
+			<div class="box box4"></div>
+			<br>
+			<p class="manjianghong">
+				满江红·怒发冲冠
+
+作者：岳飞
+
+　　怒发冲冠，凭阑处、潇潇雨歇。抬望眼，仰天长啸，壮怀激烈。三十功名尘与土，八千里路云和月。莫等闲，白了少年头，空悲切。
+　　靖康耻，犹未雪；臣子恨，何时灭？驾长车，踏破贺兰山缺。壮志饥餐胡虏肉，笑谈渴饮匈奴血。待从头，收拾旧山河，朝天阙。
+			</p>
+			<br>
+			<input type="text" size="
+			100" id="placeholder" placeholder="请输入信息：">	
+			<br>
+			<span>adsf</span>
+
+<div class="title">
+	测试标题
+</div>
+<br>
+<p class="fontstyle">
+	怒发冲冠，凭阑处
+</p>
+</body>
+</html>

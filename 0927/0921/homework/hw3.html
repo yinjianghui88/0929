@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.p1{
+			width: 700px;
+			height: 400px;
+			background-color:#89A9E7; 
+		}
+		h1{
+			font-size: 20px;
+			color: blue;
+		}
+		p{
+			font-size: 15px;
+			text-align: center;
+			font-family: "楷体";
+		}
+		.p-1::first-letter{
+			font-size: 30px;
+			color: #F00;
+		}
+		p::selection{
+			background-color:#0F0;
+			color: #000 ; 
+		}
+	</style>
+</head>
+<body>
+	<!--
+		1. 给.p1的div标签设置宽为700像素,高为400像素、背景颜色为#89A9E7; 
+	      2. 标题设为20px像素、蓝色字体；
+	      3. 段落标签设为字号15像素大小、文本居中对齐；所有字体均设为楷体。
+	      4. 第一个段落标签首字符字体 30像素，颜色为#F00；
+	      5. 选中后背景颜色为 #0F0,文字颜色为黑色#000  -->
+	<div class="p1">
+		<h1>我的窗下</h1>
+		<p class="p-1">里斯本往西去有危崖临海，大西洋冷雾迷茫。这里的正式地名叫罗卡角，俗称欧洲之角，因为这是欧洲大陆的最西点。在人们还不知道地球形状的古代，这里理所当然地被看成是天涯海角。
+		</p>
+		<p>风很大，从大西洋吹来，几乎噎得人不能呼吸。海边树立着一座石碑，上有十字架，碑文是葡萄牙古代诗人卡蒙斯写的句子：<br/>
+		大地在此结束，沧海由此开始。
+		</p>
+	</div>
+</body>
+</html>

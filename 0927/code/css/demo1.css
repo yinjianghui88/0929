@@ -1,0 +1,47 @@
+.fl{float: left;}
+#header,
+#content,
+#footer{
+    width: 1000px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+#header{
+    height: 120px;
+    background-color: #e03459;
+}
+/*内容部分开始*/
+#content{
+    height: 500px;
+    background-color: #2fa8ec;
+    margin: 10px auto;
+}
+#content .left,
+#content .right{
+    height: 400px;
+    margin-top: 10px;
+}
+#content .left{
+    width: 320px;
+    background-color: #df6659;
+    margin: 10px;
+}
+#content .right{
+    width: 650px;
+    background-color: yellow;
+}
+#content .bottom{
+    width: 980px;
+    height: 70px;
+    background-color: #a51add;
+    margin: 0 auto;
+}
+/*内容部分结束*/
+
+
+/*页脚开始*/
+#footer{
+    height: 100px;
+    background-color: #3deae1;
+}
+/*页脚结束*/

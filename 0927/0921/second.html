@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.b{
+			width: 300px;
+			height: 300px;
+			border: 1px solid #222;
+			background-color: #000;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: 0 auto;
+			box-shadow: 10px 10px 5px #888888;
+		
+			transition: all 5s  linear;
+		}
+
+		
+		.b1{
+			width: 150px;
+			height: 300px;
+			background-color: #fff;
+			/*border: 1px solid red;*/
+			position: relative;
+
+		}
+		.b1-1 , .b1-2{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			position: absolute;
+			/*border: 1px solid red;*/
+
+		}
+		.b1-1{
+			background-color:#000; 
+			left: 50%;
+			top: 150px
+
+
+		}
+		.b1-2{
+			background-color:#fff; 
+			left: 50%;
+		}
+		.c1,.c2{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin: 30% auto ;
+
+		}
+		.c1{
+			background-color: #fff;
+		}
+		.c2{
+			background-color: #000;
+		}
+		.b:hover{
+			 transform: rotate(360deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="b">
+		<div class="b1">
+			<div class="b1-1">
+				<div class="c1"></div>
+			</div>
+			<div class="b1-2">
+				<div class="c2"></div>
+			</div>
+	</div>
+	</div>
+</body>
+</html>

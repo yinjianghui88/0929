@@ -1,0 +1,205 @@
+/*元素浮动
+浮动的目的
+就是要打破文档流的默认显示规则。如果要让元素按照我们的布局要求进行显示。这时就要利用float属性
+
+浮动的时候元素的显示属性也变化了，变为"行内块级元素”,即在同一行显示并且有宽、高等属性
+
+说明：
+1.任何申明为 float 的元素自动被设置为一个“块级元素”。
+2.在标准浏览器中 浮动元素脱离了文档流 ，所以浮动元素后的元素会占据浮动元素本来
+应该所处的位置。
+3.如果水平方向上没有足够的空间容纳浮动元素，则转向下一行 。
+4.文字内容会围绕在浮动元素周围 。
+5.浮动元素只能浮动至左侧或者右侧 。
+*/
+/*左浮动*/
+.fl{float: left;/*none left right*/}
+/*右浮动*/
+.fr{float: right;}
+/*清除浮动
+clear属性指定段落的左侧或右侧不允许浮动的元素
+left :不允许左边有浮动对象
+right: 不允许右边有浮动对象
+both :不允许有浮动对象
+*/
+.clearfix::before,
+.clearfix::after{
+    display: table;
+    content: " ";
+}
+.clearfix::after{clear: both;}
+.box-1{
+    width: 200px;
+    height: 80px;
+    background-color: rgb(255,0,0);
+    opacity: .8;
+}
+.box-2{
+    width: 200px;
+    height: 80px;
+    background-color: rgb(0,255,0);
+    opacity: .8;
+}
+.box-3 {
+    width: 600px;
+    height: 50px;
+    background-color: #000;
+    color: #ccc;
+}
+.box-4{
+    width: 200px;
+    height: 30px;
+    background-color: #2C8DFB;
+}
+.box-5{
+    width: 300px;
+    height: 40px;
+    background-color: #e03459;
+}
+
+
+nav.nav-1{
+    border: 1px solid #f00;
+    width: 608px;
+    margin: 0 auto;
+}
+nav.nav-1 > a{
+    width: 120px;
+    height: 30px;
+    background-color: #2fa8ec;
+    float: left;
+    margin-right: 2px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+/*去掉最后一个超链接的右外边距*/
+nav.nav-1 > a:last-of-type{
+    margin-right: 0;
+}
+/*绝对定位1，父元素为body
+以body坐标原点进行定位
+*/
+.pos-1{
+    width: 250px;
+    height: 120px;
+    background-color: #2fe672;
+    opacity: .8;
+    position: absolute;
+    top: 220px;
+    right: 20px;
+}
+/*绝对定位2，父元素不是body，
+父元素的 position 属性为 static
+将以body坐标原点进行定位
+*/
+.pos-2{/*父元素*/
+    width: 400px;
+    height: 300px;
+    background-color: #f0ad4e;
+    position: static; /*默认，可以不写*/
+}
+.pos-2 > div:first-child{
+    width: 250px;
+    height: 180px;
+    background-color: #2fa8ec;
+    position: absolute;
+    top: 220px;
+    left: 420px;
+}
+/*绝对定位3
+父元素的position属性为relative,将以父元素坐标原点进行定位
+*/
+.pos-3{
+    width: 400px;
+    height: 300px;
+    background-color: #db2c8f;
+    position: relative;
+}
+.pos-3 > div:only-child{
+    width: 250px;
+    height: 180px;
+    background-color: #00ff73;
+    position: absolute;
+    bottom: 0px;
+    right: -100px;
+}
+/*相对定位
+relative说明 ：
+相对定位（相对自己原来的位置而言）
+不脱离文档流
+参考自身静态位置通过 top,bottom,left,right 定位
+*/
+.pos-4{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    position: relative;
+    left: 210px;
+    top: 10px;
+}
+/*固定定位 fixed */
+.pos-5{
+    width: 200px;
+    height: 400px;
+    background-color: deeppink;
+    position: fixed;
+    right: 2px;
+    top: 150px;
+}
+
+.pos-6,
+.pos-7,
+.pos-8{
+    width: 200px;
+    height: 120px;
+}
+.pos-6{
+    background-color: #00ff73;
+    position: relative;
+    left: 0;
+    z-index: 30;
+}
+.pos-7{
+    background-color: mediumpurple;
+    position: relative;
+    left: 30px;
+    top: -90px;
+    z-index: 31;
+}
+.pos-8{
+    background-color: #e03459;
+    position: relative;
+    left: 60px;
+    top: -180px;
+}
+body{
+    /*cursor: pointer;*/
+
+    cursor: url("../images/arrow.svg"),default;
+    /*需被使用的自定义光标的 URL。
+    提示： 请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标。*/
+}
+/*
+url 需使用的自定义光标的 URL
+
+注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标。
+default 	默认光标（通常是一个箭头）
+auto 	默认。浏览器设置的光标。
+crosshair 	光标呈现为十字线。
+pointer 	光标呈现为指示链接的指针（一只手）
+move 	此光标指示某对象可被移动。
+e-resize 	此光标指示矩形框的边缘可被向右（东）移动。
+ne-resize 	此光标指示矩形框的边缘可被向上及向右移动（北/东）。
+nw-resize 	此光标指示矩形框的边缘可被向上及向左移动（北/西）。
+n-resize 	此光标指示矩形框的边缘可被向上（北）移动。
+se-resize 	此光标指示矩形框的边缘可被向下及向右移动（南/东）。
+sw-resize 	此光标指示矩形框的边缘可被向下及向左移动（南/西）。
+s-resize 	此光标指示矩形框的边缘可被向下移动（北/西）。
+w-resize 	此光标指示矩形框的边缘可被向左移动（西）。
+text 	此光标指示文本。
+wait 	此光标指示程序正忙（通常是一只表或沙漏）。
+help 	此光标指示可用的帮助（通常是一个问号或一个气球）。
+ */

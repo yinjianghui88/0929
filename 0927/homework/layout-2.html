@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>	
+		footer,section,header{
+			width: 800px;
+			margin: 0 auto;
+			background-color: #ccc;
+		}
+		footer{
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			font-size: 50px;
+		}
+		header{
+			height: 120px;
+			font-size: 50px;
+			line-height: 120px;
+			background-color: #ccc;
+			text-align: center;
+			font-weight: bolder;
+		}
+		section{
+			height: 600px;
+			background-color: #ccc;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 20px auto;
+
+
+
+		}
+		aside{
+         width: 230px;
+         height: 580px;
+         border: 1px solid #666;
+		}
+		aside ul{
+			width: 100%;
+			height: 240px
+
+
+
+		}
+		.list{
+			list-style-type:none;
+
+		}
+		aside ul li{
+			width: 80%;
+			border-bottom:1px dotted #666; 
+			margin-top: 15px ;
+			list-style-position: inside;
+		    background:url(./comma_face_13.png)no-repeat left center/20px ; 
+		    text-indent: 2rem;
+		}
+		aside ol{
+			width: 100%;
+			height: 240px;
+
+		}
+		aside ol li{
+			width: 80%;
+			border-bottom:1px dotted #666; 
+			margin-top: 15px ;
+			list-style-position: inside;
+
+
+
+
+		}
+
+		aside>.adv{
+			/*position: fixed;*/
+			font-size: 30px;
+			font-weight: bolder;
+
+         border: 1px solid #666;
+         width: 95%;
+         height: 50px;
+         margin: -30px auto;
+
+
+
+		}
+		article{
+			padding: 20px;
+			width: 500px;
+			height: 580px;
+			border: 1px solid #666;
+			box-sizing:border-box;
+			position: relative;
+		}
+		textarea{
+			width: 	95%;
+			height: 60px;
+			margin: 5px auto;
+		}
+		input{
+			position: absolute;
+			width: 100px;
+			height: 40px;
+			right: 40px;
+			bottom: 10px;
+			background-color: skyblue;
+			font-size: 16px;
+			color: #555;
+			border-radius: 10px;
+		}
+		h1{
+			font-size: 34px;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<section>
+		<aside>
+		<ul class="list">
+			<li>列表内容1</li>
+			<li>列表内容2</li>
+			<li>列表内容3</li>
+			<li>列表内容4</li>
+			<li>列表内容5</li>
+		</ul>
+
+
+
+		<ol class="list1" type="i">
+			<li>内容列表1</li>
+			<li>内容列表2</li>
+			<li>内容列表3</li>
+			<li>内容列表4</li>
+			<li>内容列表5</li>
+		</ol>
+			<div class="adv">广告</div>
+		</aside>
+		<article>
+			<h1>文章标题</h1>
+			<p>人生来得突然去也匆匆</p>
+			<p>在不断感受着幸福和快乐的同时也不断接受困难和挫折
+
+　　在不断创造成功与希望的同时也不断接受着失败与折磨</p>
+			<p>　这是一段短暂而漫长的旅程</p>
+			<p>知道这段旅程短暂的人才活得如此精彩
+
+　　才更加珍惜生命
+
+　　鏖战不停地与时间赛跑
+
+　　才会有结实而雄厚的事业</p>
+			<p>有了困难和挫折才会使人不段完善自己的榜样
+
+　　正如“河里没有岩石怎能激起美丽的浪花”</p>
+<br>
+<p>留言：</p>
+<textarea  href="" alt="">
+</textarea>
+<input type="submit" value="提交">
+		</article>
+	</section>	
+	<footer>footer</footer>		
+</body>
+</html>

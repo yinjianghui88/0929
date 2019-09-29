@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/reset1.css">
+	<style>
+		#header,#content,#footer{
+			width: 800px;
+			border: 1px solid #ccc;
+			margin: 0 auto;
+
+		}
+		#header{
+			height: 120px;
+			background-color: green;
+
+		}
+		/*内容开始*/
+		#content{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 500px;
+			background-color: mediumpurple;
+			margin: 10px auto;
+
+		}
+		.left{
+			float: left;
+			margin-top:100px; 
+			width: 200px;
+			height: 300px;
+			background-color: orange;
+		}
+		.right{
+			float: left;
+			margin-top: 100px;
+			width: 400px;
+			height: 300px;
+			background-color: pink;
+		}
+		/*内容结束*/
+		#footer{
+			height: 120px;
+			background-color: skyblue;	
+
+
+		}
+		
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="content">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div id="footer"></div>
+</body>
+</html>
