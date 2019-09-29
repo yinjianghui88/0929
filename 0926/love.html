@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.circle1{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			border-radius: 50%; 
+			position: absolute;
+			box-shadow: 2px 2px 20px 0px red;
+
+			/*animation: love 2s linear 3;*/
+
+		}
+		.circle2{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			border-radius: 50%; 
+			position: absolute;
+			right: 0;
+			top: 0;
+			box-shadow: 0 0 20px 0 red;
+
+			/*animation: love 2s linear 3;*/
+
+
+		}
+		.square{
+			width: 250px;
+			height: 250px;
+			transform: rotate(45deg);
+			background-color: red;
+			position: absolute;
+			top: 130px;
+			left: 120px;
+			box-shadow: 0 0 20px 10px red;
+
+			/*animation: love 2s linear 3;*/
+		}
+
+		.box{
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			position: relative;
+			margin: 30px auto;
+			animation: love 1s linear infinite;
+			box-shadow: 0 0 20px 0 red;
+
+		}
+		@keyframes love{
+			0%{ transform: scale(0.8); }
+			50%{transform: scale(1.0);}
+			100%{
+				transform: scale(0.8);
+			}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="circle1"></div>
+	<div class="circle2"></div>
+	<div class="square"></div>
+	</div>
+
+</body>
+</html>

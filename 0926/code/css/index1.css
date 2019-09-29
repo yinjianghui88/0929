@@ -1,0 +1,103 @@
+/*元素的显示模式
+display : block | none | inline | inline-block;
+block	块对象指的是元素显示为一个方块，默认显示状态下将占据整行，其它的元素只能另起一行显示。
+inline	行间对象与block刚好相反，它允许其它元素在同一行显示。
+none	隐藏对象
+flex    弹性盒子
+*/
+.dis-1{
+    width: 200px;
+    height: 80px;
+    background-color: #f0ad4e;
+    display: inline-block;
+    /* block块对象元素 有宽、高属性
+       inline行间对象 没有宽、高属性
+       inline-block 行间块对象 有宽、高属性，并且允许其他行间元素在同一行显示
+    */
+}
+
+.nav{
+    width: 492px;
+    height: 30px;
+    border: 1px solid #f00;
+}
+.nav > span{
+    width: 120px;
+    height: 30px;
+    background-color: #2C8DFB;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+}
+/*弹性盒子
+    flex-direction 属性指定了弹性子元素在父容器中的位置
+    flex-direction的值有:
+    row：横向从左到右排列（左对齐），默认的排列方式
+    row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面
+    column：纵向排列
+    column-reverse：反转纵向排列，从后往前排，最后一项排在最上面
+
+    justify-content 属性
+    flex-start
+    flex-end
+    center
+    space-around
+    space-between
+*/
+.flex-box{
+    /*width: 600px;*/
+    width: 70%;
+    height: 200px;
+    border: 1px solid #f00;
+    display: -webkit-flex;
+    display: flex; /*弹性布局*/
+
+    /*弹性子元素的排列方式 ltr rtl*/
+    direction: ltr;
+    /*弹性子元素在父容器中的位置*/
+    flex-direction: row;/*row row-reverse column column-reverse*/
+    justify-content: space-between;
+}
+.flex-box > div{
+    width: 120px;
+    height: 100px;
+}
+.flex-box > div:nth-child(2n){
+    background-color: #2fe672;
+}
+.flex-box > div:nth-child(2n-1){
+    background-color: #e03459;
+}
+
+
+/*align-items:弹性盒子元素在侧轴（纵轴）方向上的对齐方式
+flex-start | flex-end | center | baseline | stretch*/
+.flex-box1{
+    width: 600px;
+    height: 320px;
+    border: 1px solid #2C8DFB;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.flex-box1 > div{
+    width: 120px;
+    background-color: #cffccc;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+}
+/*flex-wrap 弹性盒子的子元素换行方式*/
+.flex-box2{
+    width: 600px;
+    height: 200px;
+    border: 1px solid #00f;
+    display: flex;
+    flex-wrap: wrap; /*wrap nowrap(默认) wrap-reverse*/
+}
+.flex-box2 > div{
+    width: 150px;
+    height: 100px;
+    border: 1px solid #f00;
+    box-sizing: border-box;
+    background-color: #7f0;
+}

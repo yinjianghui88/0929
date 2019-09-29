@@ -1,0 +1,66 @@
+body{background-color: #666}
+.box,
+.container{
+    width: 230px;
+    height: 340px;
+}
+.box{
+    /*border: 3px solid #f00;*/
+    margin: 120px auto; /*居中*/
+    /*视距*/
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.container{
+    /*border: 3px solid #00f;*/
+    position: relative;
+    transform: rotateX(-25deg);
+    /*让转换的子元素保留3D转换*/
+    transform-style: preserve-3d;
+    animation: XZ 12s linear infinite;
+}
+.container > img{
+    position: absolute;
+    opacity: .9;
+    width: 230px;
+    height: 340px;
+    border-radius: 10px;
+}
+.container:hover{/*鼠标移入，暂停动画*/
+    animation-play-state: paused;
+}
+.container > img:nth-child(1){
+    transform: translateZ(340px);
+}
+.container > img:nth-child(2){
+    transform: rotateY(40deg) translateZ(340px);
+}
+.container > img:nth-child(3){
+    transform: rotateY(80deg) translateZ(340px);
+}
+.container > img:nth-child(4){
+    transform: rotateY(120deg) translateZ(340px);
+}
+.container > img:nth-child(5){
+    transform: rotateY(160deg) translateZ(340px);
+}
+.container > img:nth-child(6){
+    transform: rotateY(200deg) translateZ(340px);
+}
+.container > img:nth-child(7){
+    transform: rotateY(240deg) translateZ(340px);
+}
+.container > img:nth-child(8){
+    transform: rotateY(280deg) translateZ(340px);
+}
+.container > img:nth-child(9){
+    transform: rotateY(320deg) translateZ(340px);
+}
+@keyframes XZ {
+    from{
+        transform: rotateX(-25deg) rotateY(0deg);
+    }
+    to{
+        transform: rotateX(-25deg) rotateY(360deg);
+    }
+}

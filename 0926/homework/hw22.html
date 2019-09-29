@@ -1,0 +1,107 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			.box{
+				width: 680px;
+				height: 260px;
+				background-color: #ccc;
+				margin: 30px auto;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+
+			}
+			.picture{
+				width: 200px;
+				height: 220px;
+				border-radius:30px; 
+				transform-style:preserve-3d; 
+                    perspective:400px;
+                  transition: all 2s linear;
+                  position: relative;
+				
+
+			}
+			.picture:hover{
+				transform: rotateY(
+					180deg);
+			}
+			.p1{
+				background:url(./images/1.gif)no-repeat 50% 50%/100%;
+			}
+			.p2{
+				background:url(./images/2.gif)no-repeat 50% 50%/100%;
+			}
+			.p3{
+				background:url(./images/3.gif)no-repeat 50% 50%/100%;
+			}
+
+			.picture>p{
+				    transform-style:preserve-3d; 
+					color: #fff;
+					text-align: center;
+					line-height: 50px;
+					font-size:30px; 
+					transform: translateZ(20px);
+			}
+			
+ 
+.picture .bg{
+				    transform-style:preserve-3d; 
+
+	width: 200px;
+	height: 220px;
+		border-radius:30px; 
+		background-image:linear-gradient(rgb(84,113,121),rgb(163,168,177),rgb(226,212,222));
+	transform: translateZ(-1px);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.picture .bg>p{
+	color: #fff;
+					text-align: center;
+					line-height: 20px;
+					font-size:30px; 
+					transform: translateZ(-50px)rotateX(180deg)rotateZ(180deg);
+}
+
+
+
+
+
+		</style>
+
+	</head>
+	<body>
+		<div class="box">
+			<div class="picture p1"><p>jiang</p>
+			<p>jiangzi</p>
+			<div class="bg">
+				<p>sdaf</p>
+				<p>fasd</p>
+				<p>asdf</p>
+			</div>
+			</div>
+			<div class="picture p2">
+				<div class="bg">
+				<p>sdaf</p>
+				<p>fasd</p>
+				<p>asdf</p>
+			</div>
+			</div>
+			<div class="picture p3">
+				<div class="bg">
+				<p>sdaf</p>
+				<p>fasd</p>
+				<p>asdf</p>
+			</div>
+			</div>
+
+
+		</div>
+	</body>
+	</html>

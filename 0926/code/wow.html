@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wow.js插件测试</title>
+    <!--1. 加载animate.css    wow.js 依赖 animate.css -->
+    <link rel="stylesheet" href="./resources/animate.css" />
+    <style>
+        div[class^="box"]{
+            width: 1000px;
+            height: 100px;
+        }
+        .box-1{background-color: #f24448;}
+        .box-2{background-color: #44f248;}
+        .box-3{background-color: #4484f2;height: 200px!important;}
+        .box-4{background-color: #8424f4;}
+    </style>
+</head>
+<body>
+    <!--3. 使用wow插件 结合animate动画
+        data-wow-duration 改变动画的持续时间
+        data-wow-delay    改变动画的延迟时间
+        data-wow-offset:  启动动画的距离(与浏览器底部相关)
+        data-wow-iteration: 动画重复的次数
+    -->
+    <div class="box-1 wow fadeInDown" data-wow-duration=".5s">测试WOW.js插件 1</div>
+    <div class="box-2 wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="1s">测试WOW.js插件 2</div>
+    <div class="box-3 wow fadeInUp" data-wow-duration="3s" data-wow-delay="1s" data-wow-offset="120">测试WOW.js插件 2</div>
+    <div class="box-4 wow lightSpeedIn" data-wow-duration="1s" data-wow-delay="1s" data-wow-iteration="2">测试WOW.js插件 2</div>
+
+    <!--2. 加载wow.js 并且实例化-->
+    <script src="./resources/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>

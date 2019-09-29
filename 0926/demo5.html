@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+			.flex{
+				width: 600px;
+				height: 300px;
+				border: 1px solid red;
+				display: flex;
+				/*direction: ltr;*/
+				/*flex-direction: row;*/
+				justify-content:center;
+				align-items: center;
+
+			}
+			.flex>div{	
+				width: 120px ;
+				height: 120px;
+
+			}
+
+.flex>div:nth-child(2n){
+	background-color: green;
+}
+.flex>div:nth-child(2n+1){
+	background-color: orange;
+}
+
+	</style>
+</head>
+<body>
+	<div class="flex">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</div>
+</body>
+</html>
